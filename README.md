@@ -14,4 +14,7 @@ Go to the [Relational Diagram](https://github.com/ICC4103-202420-WebTech/project
 Implemented the necessary models to create the platform, along with its main view, and with the previously loaded data.
 - Rails app
 - Seeds
-- Queries 
+- Queries
+
+## Assignment #3
+Added CRUD for the models.
