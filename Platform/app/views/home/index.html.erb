@@ -1,0 +1,7 @@
+<h1>Welcome to the Course Platform</h1>
+<p><%= link_to "Browse Courses", courses_path %></p>
+<% if user_signed_in? %>
+  <p><%= link_to "Your Profile", user_path(current_user) %></p>
+<% else %>
+  <p><%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Log In", new_user_session_path %></p>
+<% end %>
