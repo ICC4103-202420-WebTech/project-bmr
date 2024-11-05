@@ -26,6 +26,10 @@ class Ability
       # Enrolled users can read and create answers to questions in enrolled courses
       can :read, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
       can :create, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
+    else
+      # Guests (not logged in) can only read courses and access the registration and login pages
+      can :read, Course
+      can :create, User # Allow guest users to create accounts
     end
   end
 end

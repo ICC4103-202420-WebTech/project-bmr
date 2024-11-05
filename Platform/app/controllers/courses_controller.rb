@@ -1,6 +1,7 @@
 class CoursesController < ApplicationController
-  before_action :authenticate_user!
-  before_action :set_course, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_course, only: [:edit, :update, :destroy]
 
   def index
     @courses = Course.all
