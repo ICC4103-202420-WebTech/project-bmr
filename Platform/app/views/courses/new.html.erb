@@ -1,5 +1,11 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'All Courses', courses_path %></li>
+    <li class="breadcrumb-item active" aria-current="page">Create a New Course</li>
+  </ol>
+</nav>
 <h1>Create a New Course</h1>
+<p class="lead">Fill in the details below to create your course. Make it informative and engaging for your students!</p>
 
 <%= render 'form', course: @course %>
 
-<%= link_to 'Volver a la lista de cursos', courses_path %>

@@ -1,3 +1,10 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'All Courses', courses_path %></li>
+    <li class="breadcrumb-item"><%= link_to @course.title, course_path(@course) %></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @lesson.title %></li>
+  </ol>
+</nav>
 <div class="container">
   <h1><%= @lesson.title %></h1>
 
@@ -8,6 +15,7 @@
   <div class="mt-4">
     <%= link_to 'Back to Course', course_path(@course), class: 'btn btn-primary' %>
     
+
     <% if can? :update, @lesson %>
       <%= link_to 'Edit Lesson', edit_course_lesson_path(@course, @lesson), class: 'btn btn-secondary' %>
     <% end %>

@@ -1,5 +1,14 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'All Courses', courses_path %></li>
+    <li class="breadcrumb-item"><%= link_to @course.title, course_path(@course) %></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Lesson: <%= @lesson.title %></li>
+  </ol>
+</nav>
+
 <div class="container">
-  <h1>Edit Lesson: <%= @lesson.title %></h1>
+  <h1>Edit Lesson</h1>
+  <p>Update the details of the lesson below. Once you are finished, click "Save Changes" to apply your updates.</p>
 
   <%= form_with(model: [@course, @lesson], local: true) do |form| %>
     <% if @lesson.errors.any? %>
@@ -28,8 +37,7 @@
       <%= form.text_field :video_url, class: "form-control" %>
     </div>
 
-    <%= form.submit class: "btn btn-primary" %>
+    <%= form.submit "Save Changes", class: "btn btn-primary" %>
   <% end %>
 
-  <%= link_to 'Back to Lessons', course_lessons_path(@course), class: 'btn btn-secondary' %>
 </div>

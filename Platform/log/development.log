@@ -8702,3 +8702,1463 @@ Processing by CoursesController#index as HTML
 Completed 200 OK in 22ms (Views: 7.0ms | ActiveRecord: 2.0ms (8 queries, 3 cached) | GC: 1.4ms)
 
 
+Started GET "/courses/new" for 127.0.0.1 at 2024-11-05 17:15:03 -0300
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.5ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 16.0ms | GC: 11.4ms)
+  Rendered courses/new.html.erb within layouts/application (Duration: 17.4ms | GC: 11.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | GC: 13.6ms)
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 1.7ms (5 queries, 3 cached) | GC: 15.1ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2024-11-05 17:15:42 -0300
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 1.2ms | GC: 0.2ms)
+  Rendered courses/new.html.erb within layouts/application (Duration: 1.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.2ms)
+Completed 200 OK in 26ms (Views: 3.0ms | ActiveRecord: 10.1ms (5 queries, 3 cached) | GC: 1.1ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2024-11-05 17:16:46 -0300
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered courses/new.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.3ms)
+Completed 200 OK in 46ms (Views: 4.0ms | ActiveRecord: 22.5ms (5 queries, 3 cached) | GC: 6.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-11-05 17:16:49 -0300
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:11
+  [1m[36mCourse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mCourse Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.4ms)
+Completed 200 OK in 18ms (Views: 6.0ms | ActiveRecord: 1.9ms (8 queries, 3 cached) | GC: 1.2ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:16:51 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:3
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.1ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:7
+  Rendered courses/show.html.erb within layouts/application (Duration: 17.0ms | GC: 0.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | GC: 0.7ms)
+Completed 200 OK in 39ms (Views: 16.1ms | ActiveRecord: 4.9ms (9 queries, 4 cached) | GC: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-05 17:16:53 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:22
+  Rendered home/index.html.erb within layouts/application (Duration: 3.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/my_courses" for 127.0.0.1 at 2024-11-05 17:16:54 -0300
+Processing by CoursesController#my_courses as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/my_courses.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/courses/my_courses.html.erb:5
+  Rendered courses/my_courses.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | GC: 0.0ms)
+Completed 200 OK in 14ms (Views: 2.7ms | ActiveRecord: 0.8ms (6 queries, 3 cached) | GC: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-05 17:16:56 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:22
+  Rendered home/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | GC: 0.4ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-11-05 17:16:56 -0300
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:11
+  [1m[36mCourse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mCourse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 8.0ms | ActiveRecord: 1.8ms (8 queries, 3 cached) | GC: 1.5ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2024-11-05 17:16:57 -0300
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 2.6ms | GC: 0.0ms)
+  Rendered courses/new.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | GC: 0.3ms)
+Completed 200 OK in 20ms (Views: 5.2ms | ActiveRecord: 0.9ms (5 queries, 3 cached) | GC: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2024-11-05 17:16:59 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:22
+  Rendered home/index.html.erb within layouts/application (Duration: 6.3ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.6ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/my_courses" for 127.0.0.1 at 2024-11-05 17:17:00 -0300
+Processing by CoursesController#my_courses as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/my_courses.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/courses/my_courses.html.erb:5
+  Rendered courses/my_courses.html.erb within layouts/application (Duration: 1.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 3.4ms | ActiveRecord: 1.1ms (6 queries, 3 cached) | GC: 0.7ms)
+
+
+Started GET "/my_courses" for 127.0.0.1 at 2024-11-05 17:17:02 -0300
+Processing by CoursesController#my_courses as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/my_courses.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/views/courses/my_courses.html.erb:5
+  Rendered courses/my_courses.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 1.0ms (6 queries, 3 cached) | GC: 0.5ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:17:03 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:3
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:7
+  Rendered courses/show.html.erb within layouts/application (Duration: 5.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 22ms (Views: 6.4ms | ActiveRecord: 1.1ms (9 queries, 4 cached) | GC: 0.4ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:17:44 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:10
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.2ms)
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:14
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.8ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.3ms)
+Completed 200 OK in 56ms (Views: 7.3ms | ActiveRecord: 32.4ms (9 queries, 4 cached) | GC: 1.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-11-05 17:17:47 -0300
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:11
+  [1m[36mCourse Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mCourse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.1ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.3ms)
+Completed 200 OK in 21ms (Views: 5.9ms | ActiveRecord: 2.2ms (8 queries, 3 cached) | GC: 1.0ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:18:09 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:10
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:14
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 7.9ms | ActiveRecord: 2.0ms (9 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/courses/2/lessons/new" for 127.0.0.1 at 2024-11-05 17:18:11 -0300
+Processing by LessonsController#new as HTML
+  Parameters: {"course_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/new.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.0ms | ActiveRecord: 0.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/courses/2/lessons/new" for 127.0.0.1 at 2024-11-05 17:18:46 -0300
+Processing by LessonsController#new as HTML
+  Parameters: {"course_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/new.html.erb within layouts/application (Duration: 1.6ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.2ms)
+Completed 200 OK in 43ms (Views: 3.2ms | ActiveRecord: 27.7ms (2 queries, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:19:00 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:10
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.9ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:14
+  Rendered courses/show.html.erb within layouts/application (Duration: 9.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 10.1ms | ActiveRecord: 3.0ms (9 queries, 4 cached) | GC: 1.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-11-05 17:19:04 -0300
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:11
+  [1m[36mCourse Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mCourse Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 8.3ms | ActiveRecord: 2.5ms (8 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:19:09 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:10
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:14
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 8.3ms | ActiveRecord: 1.5ms (9 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/courses/2/lessons/new" for 127.0.0.1 at 2024-11-05 17:19:27 -0300
+Processing by LessonsController#new as HTML
+  Parameters: {"course_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/new.html.erb within layouts/application (Duration: 1.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.2ms)
+Completed 200 OK in 30ms (Views: 3.0ms | ActiveRecord: 16.0ms (2 queries, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-11-05 17:19:29 -0300
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:11
+  [1m[36mCourse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mCourse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 5.9ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.3ms)
+Completed 200 OK in 31ms (Views: 6.3ms | ActiveRecord: 3.3ms (8 queries, 3 cached) | GC: 1.4ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2024-11-05 17:19:50 -0300
+Processing by CoursesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered courses/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 2.6ms | ActiveRecord: 9.7ms (5 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-11-05 17:19:52 -0300
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.5ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:11
+  [1m[36mCourse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mCourse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 8.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 8.2ms | ActiveRecord: 2.4ms (8 queries, 3 cached) | GC: 0.0ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:19:53 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:9
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.2ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:13
+  Rendered courses/show.html.erb within layouts/application (Duration: 16.9ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | GC: 1.2ms)
+Completed 200 OK in 33ms (Views: 14.7ms | ActiveRecord: 6.4ms (9 queries, 4 cached) | GC: 2.3ms)
+
+
+Started GET "/courses/2/lessons/new" for 127.0.0.1 at 2024-11-05 17:19:55 -0300
+Processing by LessonsController#new as HTML
+  Parameters: {"course_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/new.html.erb within layouts/application (Duration: 4.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 6.7ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:19:57 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.4ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:9
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:13
+  Rendered courses/show.html.erb within layouts/application (Duration: 6.1ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.2ms)
+Completed 200 OK in 25ms (Views: 6.6ms | ActiveRecord: 1.5ms (9 queries, 4 cached) | GC: 1.2ms)
+
+
+Started GET "/courses/2/edit" for 127.0.0.1 at 2024-11-05 17:19:58 -0300
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:63:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/edit.html.erb:11
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 19.8ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | GC: 0.5ms)
+Completed 200 OK in 37ms (Views: 20.5ms | ActiveRecord: 1.0ms (8 queries, 4 cached) | GC: 1.2ms)
+
+
+Started GET "/courses/2/edit" for 127.0.0.1 at 2024-11-05 17:20:43 -0300
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:63:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/edit.html.erb:11
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 4.2ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.6ms)
+Completed 200 OK in 56ms (Views: 10.5ms | ActiveRecord: 25.8ms (8 queries, 4 cached) | GC: 5.3ms)
+
+
+Started GET "/courses/2/edit" for 127.0.0.1 at 2024-11-05 17:20:46 -0300
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:63:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/edit.html.erb:11
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 5.0ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | GC: 0.6ms)
+Completed 200 OK in 22ms (Views: 5.8ms | ActiveRecord: 0.9ms (8 queries, 4 cached) | GC: 3.2ms)
+
+
+Started GET "/courses/2/lessons/new" for 127.0.0.1 at 2024-11-05 17:20:49 -0300
+Processing by LessonsController#new as HTML
+  Parameters: {"course_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/new.html.erb within layouts/application
+  Rendered lessons/new.html.erb within layouts/application (Duration: 3.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 5.9ms | ActiveRecord: 3.9ms (2 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/courses/2/edit" for 127.0.0.1 at 2024-11-05 17:20:52 -0300
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:63:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/edit.html.erb:11
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 5.7ms | ActiveRecord: 1.1ms (8 queries, 4 cached) | GC: 0.8ms)
+
+
+Started GET "/courses/2/lessons/3" for 127.0.0.1 at 2024-11-05 17:20:58 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/show.html.erb:5
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.0ms)
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendered lessons/show.html.erb within layouts/application (Duration: 11.7ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | GC: 0.6ms)
+Completed 200 OK in 26ms (Views: 12.5ms | ActiveRecord: 1.6ms (8 queries, 3 cached) | GC: 1.3ms)
+
+
+Started GET "/courses/2/lessons/3/edit" for 127.0.0.1 at 2024-11-05 17:20:59 -0300
+Processing by LessonsController#edit as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/edit.html.erb:33
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.7ms | GC: 0.0ms)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 9.3ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | GC: 0.4ms)
+Completed 200 OK in 20ms (Views: 10.9ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/courses/2/lessons/3/edit" for 127.0.0.1 at 2024-11-05 17:21:39 -0300
+Processing by LessonsController#edit as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/edit.html.erb:33
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 4.5ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | GC: 0.3ms)
+Completed 200 OK in 40ms (Views: 6.6ms | ActiveRecord: 15.1ms (4 queries, 0 cached) | GC: 7.1ms)
+
+
+Started GET "/courses/2/lessons/3/edit" for 127.0.0.1 at 2024-11-05 17:21:48 -0300
+Processing by LessonsController#edit as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/edit.html.erb:33
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 3.3ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.1ms)
+Completed 200 OK in 25ms (Views: 4.4ms | ActiveRecord: 9.9ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/courses/2/lessons" for 127.0.0.1 at 2024-11-05 17:21:56 -0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LessonsController):
+  
+actionpack (7.2.1.2) lib/abstract_controller/base.rb:158:in `process'
+actionview (7.2.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1.2) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1.2) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.2.1.2) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/courses/2/lessons/3/edit" for 127.0.0.1 at 2024-11-05 17:22:14 -0300
+Processing by LessonsController#edit as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/edit.html.erb:33
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 3.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.1ms)
+Completed 200 OK in 30ms (Views: 4.6ms | ActiveRecord: 11.6ms (4 queries, 0 cached) | GC: 3.4ms)
+
+
+Started GET "/courses/2/lessons" for 127.0.0.1 at 2024-11-05 17:22:17 -0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LessonsController):
+  
+actionpack (7.2.1.2) lib/abstract_controller/base.rb:158:in `process'
+actionview (7.2.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1.2) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1.2) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.2.1.2) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:22:49 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:9
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.3ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:13
+  Rendered courses/show.html.erb within layouts/application (Duration: 5.5ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | GC: 0.2ms)
+Completed 200 OK in 29ms (Views: 6.4ms | ActiveRecord: 5.4ms (9 queries, 4 cached) | GC: 0.7ms)
+
+
+Started GET "/courses/2/lessons/3" for 127.0.0.1 at 2024-11-05 17:22:53 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.4ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/show.html.erb:5
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.3ms | GC: 0.0ms)
+  [1m[36mCourse Pluck (0.3ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendered lessons/show.html.erb within layouts/application (Duration: 12.0ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.4ms)
+Completed 200 OK in 25ms (Views: 12.6ms | ActiveRecord: 1.6ms (8 queries, 3 cached) | GC: 0.7ms)
+
+
+Started GET "/courses/2/lessons/3/edit" for 127.0.0.1 at 2024-11-05 17:22:56 -0300
+Processing by LessonsController#edit as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/edit.html.erb:33
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.0ms | GC: 0.0ms)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 6.8ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | GC: 0.2ms)
+Completed 200 OK in 17ms (Views: 7.9ms | ActiveRecord: 1.1ms (4 queries, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/courses/2/lessons" for 127.0.0.1 at 2024-11-05 17:22:58 -0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LessonsController):
+  
+actionpack (7.2.1.2) lib/abstract_controller/base.rb:158:in `process'
+actionview (7.2.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1.2) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1.2) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.2.1.2) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/courses/2/lessons" for 127.0.0.1 at 2024-11-05 17:23:00 -0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LessonsController):
+  
+actionpack (7.2.1.2) lib/abstract_controller/base.rb:158:in `process'
+actionview (7.2.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1.2) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1.2) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.2.1.2) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/courses/2/lessons/3" for 127.0.0.1 at 2024-11-05 17:24:20 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/show.html.erb:14
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendered lessons/show.html.erb within layouts/application (Duration: 15.6ms | GC: 4.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | GC: 4.5ms)
+Completed 200 OK in 54ms (Views: 15.1ms | ActiveRecord: 26.4ms (8 queries, 3 cached) | GC: 4.5ms)
+
+
+Started GET "/courses/2/lessons" for 127.0.0.1 at 2024-11-05 17:24:22 -0300
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for LessonsController):
+  
+actionpack (7.2.1.2) lib/abstract_controller/base.rb:158:in `process'
+actionview (7.2.1.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (7.2.1.2) lib/action_controller/metal.rb:335:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:67:in `dispatch'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:50:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (7.2.1.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (7.2.1.2) lib/action_dispatch/routing/route_set.rb:896:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.1.8) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.8) lib/rack/etag.rb:29:in `call'
+rack (3.1.8) lib/rack/conditional_get.rb:31:in `call'
+rack (3.1.8) lib/rack/head.rb:15:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.2.1.2) lib/active_record/migration.rb:674:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.1.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.1.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.1.2) lib/rails/rack/logger.rb:29:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.1.8) lib/rack/method_override.rb:28:in `call'
+rack (3.1.8) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.1.8) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.2.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+webpacker (5.4.4) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.7) lib/rack/proxy.rb:87:in `call'
+railties (7.2.1.2) lib/rails/engine.rb:535:in `call'
+puma (6.4.3) lib/puma/configuration.rb:272:in `call'
+puma (6.4.3) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.3) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.3) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.3) lib/puma/server.rb:464:in `process_client'
+puma (6.4.3) lib/puma/server.rb:245:in `block in run'
+puma (6.4.3) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:24:24 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:9
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.3ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:13
+  Rendered courses/show.html.erb within layouts/application (Duration: 6.2ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.1ms)
+Completed 200 OK in 21ms (Views: 7.2ms | ActiveRecord: 1.2ms (9 queries, 4 cached) | GC: 0.1ms)
+
+
+Started GET "/courses/2/lessons/3" for 127.0.0.1 at 2024-11-05 17:24:32 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.1ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/show.html.erb:13
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.5ms | GC: 0.0ms)
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendered lessons/show.html.erb within layouts/application (Duration: 8.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 8.4ms | ActiveRecord: 15.2ms (8 queries, 3 cached) | GC: 0.1ms)
+
+
+Started GET "/courses/2/lessons/3" for 127.0.0.1 at 2024-11-05 17:24:55 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.2ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/show.html.erb:13
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mCourse Pluck (4.8ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendered lessons/show.html.erb within layouts/application (Duration: 14.2ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | GC: 0.3ms)
+Completed 200 OK in 42ms (Views: 9.2ms | ActiveRecord: 21.9ms (8 queries, 3 cached) | GC: 0.8ms)
+
+
+Started GET "/courses/2/lessons/3/edit" for 127.0.0.1 at 2024-11-05 17:24:56 -0300
+Processing by LessonsController#edit as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/edit.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.4ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/edit.html.erb:32
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.0ms)
+  Rendered lessons/edit.html.erb within layouts/application (Duration: 9.7ms | GC: 0.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | GC: 0.2ms)
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 1.0ms (4 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:24:57 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:9
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:13
+  Rendered courses/show.html.erb within layouts/application (Duration: 7.4ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.3ms)
+Completed 200 OK in 25ms (Views: 8.6ms | ActiveRecord: 1.2ms (9 queries, 4 cached) | GC: 1.0ms)
+
+
+Started GET "/courses/2/lessons/3" for 127.0.0.1 at 2024-11-05 17:24:59 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/show.html.erb:13
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 1.2ms | GC: 0.0ms)
+  [1m[36mCourse Pluck (0.4ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendered lessons/show.html.erb within layouts/application (Duration: 11.7ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | GC: 0.4ms)
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 1.4ms (8 queries, 3 cached) | GC: 0.9ms)
+
+
+Started GET "/courses/2/lessons/3" for 127.0.0.1 at 2024-11-05 17:25:18 -0300
+Processing by LessonsController#show as HTML
+  Parameters: {"course_id"=>"2", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:46:in `set_course'
+  [1m[36mLesson Load (0.1ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1 AND "lessons"."id" = $2 LIMIT $3[0m  [["course_id", 2], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/lessons_controller.rb:50:in `set_lesson'
+  Rendering layout layouts/application.html.erb
+  Rendering lessons/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Lesson"], ["name", "content"], ["LIMIT", 1]]
+  ↳ app/views/lessons/show.html.erb:12
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.6ms | GC: 0.0ms)
+  [1m[36mCourse Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendered lessons/show.html.erb within layouts/application (Duration: 9.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 9.3ms | ActiveRecord: 28.5ms (8 queries, 3 cached) | GC: 0.2ms)
+
+
+Started GET "/courses/2" for 127.0.0.1 at 2024-11-05 17:25:22 -0300
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  [1m[36mCACHE Course Load (0.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mActionText::RichText Load (0.3ms)[0m  [1m[34mSELECT "action_text_rich_texts".* FROM "action_text_rich_texts" WHERE "action_text_rich_texts"."record_id" = $1 AND "action_text_rich_texts"."record_type" = $2 AND "action_text_rich_texts"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Course"], ["name", "description"], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:9
+  Rendered /Users/beatricevaldesbretti/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/gems/actiontext-7.2.1.2/app/views/action_text/contents/_content.html.erb within layouts/action_text/contents/_content (Duration: 0.4ms | GC: 0.0ms)
+  [1m[36mLesson Load (0.2ms)[0m  [1m[34mSELECT "lessons".* FROM "lessons" WHERE "lessons"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/views/courses/show.html.erb:13
+  Rendered courses/show.html.erb within layouts/application (Duration: 6.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 8.3ms | ActiveRecord: 1.1ms (9 queries, 4 cached) | GC: 0.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2024-11-05 17:25:23 -0300
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Pluck (0.2ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:19:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:20:in `initialize'
+  [1m[36mCACHE Course Pluck (0.0ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:29:in `initialize'
+  [1m[36mCACHE Course Pluck (0.1ms)[0m  [1m[34mSELECT "courses"."id" FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/models/ability.rb:30:in `initialize'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:11
+  [1m[36mCourse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  [1m[36mCourse Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "courses" INNER JOIN "enrollments" ON "courses"."id" = "enrollments"."course_id" WHERE "enrollments"."user_id" = $1 AND "courses"."id" = $2 LIMIT $3[0m  [["user_id", 3], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/courses/index.html.erb:18
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 6.2ms | ActiveRecord: 2.3ms (8 queries, 3 cached) | GC: 0.0ms)
+
+
