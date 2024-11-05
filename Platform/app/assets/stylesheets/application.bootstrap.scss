@@ -8,22 +8,32 @@
     border-radius: 0.5rem;
     text-align: center;
   }
+  html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex-grow: 1; /* Allow main content to grow and fill available space */
+  }
   
   .footer {
     background-color: #343a40;
     color: #ffffff;
-    padding: 1rem 0;
-  }
-  
-  .footer p {
-    margin: 0;
+
   }
   
   .navbar {
     margin-bottom: 1rem;
   }
   .navbar-brand {
-    padding-left: 20px; // Adjust this value as needed
+    padding-left: 20px; 
   }
   
   .btn-primary {
@@ -47,3 +57,4 @@
   .mb-4 {
     margin-bottom: 1.5rem !important;
   }
+
