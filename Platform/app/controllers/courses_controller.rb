@@ -4,7 +4,10 @@ class CoursesController < ApplicationController
   before_action :set_course, only: [:edit, :update, :destroy]
 
   def index
-    @courses = Course.all
+    @courses = Course.all # Fetch all courses
+  end
+  def my_courses
+    @enrolled_courses = current_user.enrolled_courses
   end
 
   def show
@@ -46,6 +49,12 @@ class CoursesController < ApplicationController
     @course.destroy
     flash[:notice] = "Course deleted successfully"
     redirect_to courses_path
+  end
+
+  def enroll
+    @course = Course.find(params[:id])
+    current_user.courses << @course unless current_user.courses.include?(@course)
+    redirect_to courses_path, notice: "Successfully enrolled in #{@course.title}."
   end
 
   private

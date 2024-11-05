@@ -5,3 +5,5 @@ import * as bootstrap from "bootstrap"
 
 import "trix"
 import "@rails/actiontext"
+
+import "@popperjs/core";

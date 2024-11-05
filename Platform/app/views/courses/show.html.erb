@@ -10,8 +10,8 @@
   </ul>
 
   <div class="mt-4">
-    <% if can? :create, Lesson %>
-      <%= link_to 'Add Lesson', new_course_lesson_path(@course), class: 'btn btn-primary' %>
+    <% if can?(:manage, Lesson.new(course: @course)) %>
+    <%= link_to 'Add Lesson', new_course_lesson_path(@course), class: 'btn btn-primary' %>
     <% end %>
 
     <% if can? :update, @course %>

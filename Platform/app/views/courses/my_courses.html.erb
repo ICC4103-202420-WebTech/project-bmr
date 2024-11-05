@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>My Courses</h1>
+  
+  <div class="row">
+    <% @courses.each do |course| %>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><%= course.title %></h5>
+            <%= link_to 'View Course', course_path(course), class: 'btn btn-primary' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  
+  <% if @courses.empty? %>
+    <p>You are not enrolled in any courses.</p>
+  <% end %>
+</div>

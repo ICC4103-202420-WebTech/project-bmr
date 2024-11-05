@@ -63,3 +63,5 @@ gem "devise", "~> 4.9"
 gem "cancancan", "~> 3.6"
 
 gem "actiontext", "~> 7.2"
+gem "trix"
+gem 'webpacker'

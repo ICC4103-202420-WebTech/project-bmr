@@ -16,8 +16,14 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :courses do
     resources :lessons
-    resources :enrollments, only: [:create, :destroy]
     resources :questions, only: [:create, :destroy]
+    resources :enrollments, only: [:create, :destroy]
+    # Add the enroll route
+    member do
+      post 'enroll'
+    end
   end
+  
+  # Route to show user's enrolled courses
   get 'my_courses', to: 'courses#my_courses', as: 'my_courses'
 end
