@@ -11,6 +11,7 @@ class Ability
       can :manage, Course, user_id: user.id
       can :manage, Lesson, course: { user_id: user.id }
       can :manage, Question, user_id: user.id
+      can :enroll, Course
 
       # Allow users to read any course
       can :read, Course
