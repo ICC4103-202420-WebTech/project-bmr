@@ -20,7 +20,7 @@
       <h3>Enroll Now</h3>
       <p>Sign up or log in to start learning today.</p>
       <% if user_signed_in? %>
-        <%= link_to "My Courses", courses_path(user_id: current_user.id), class: "btn btn-primary" %>
+        <%= link_to "My Courses", my_courses_path, class: "btn btn-primary" %>
       <% else %>
         <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary" %>
       <% end %>
