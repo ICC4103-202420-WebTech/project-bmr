@@ -18,3 +18,6 @@ Implemented the necessary models to create the platform, along with its main vie
 
 ## Assignment #3
 Added CRUD for the models.
+
+## Assignment #4 
+Added Devise and CanCanCan, also updated some views.
