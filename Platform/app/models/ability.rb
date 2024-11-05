@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -29,7 +27,11 @@ class Ability
       # Enrolled users can read and create answers to questions in enrolled courses
       can :read, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
       can :create, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
-      
+
+      # Prevent enrolled users from editing or deleting courses or managing lessons
+      cannot :update, Course, user_id: user.id # Only course creator can update their course
+      cannot :destroy, Course, user_id: user.id # Only course creator can destroy their course
+      cannot :manage, Lesson, course: { user_id: user.id } # Only course creator can manage lessons
     else
       # Guests (not logged in) can only read courses and access the registration and login pages
       can :read, Course
