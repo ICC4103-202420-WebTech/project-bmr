@@ -4,8 +4,9 @@ class CoursesController < ApplicationController
   before_action :set_course, only: [:edit, :update, :destroy]
 
   def index
-    @courses = Course.all # Fetch all courses
+    @courses = Course.all
   end
+  
   def my_courses
     @enrolled_courses = current_user.enrolled_courses
   end
