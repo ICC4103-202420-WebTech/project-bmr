@@ -16,10 +16,12 @@
             <p class="text-muted">Created by: <%= course.user.email %></p>
             <a href="<%= course_path(course) %>" class="btn btn-primary">View Course</a>
             
-            <% if user_signed_in? && !current_user.enrolled_courses.include?(course) %>
-              <%= button_to 'Enroll', enroll_course_path(course), method: :post, class: 'btn btn-success' %>
-            <% elsif user_signed_in? && current_user.enrolled_courses.include?(course) %>
-              <span class="badge badge-success">Enrolled</span>
+            <% if user_signed_in? %>
+              <% if current_user != course.user && !current_user.enrolled_courses.include?(course) %>
+                <%= button_to 'Enroll', enroll_course_path(course), method: :post, class: 'btn btn-success' %>
+              <% elsif current_user.enrolled_courses.include?(course) %>
+                <span class="badge badge-success">Enrolled</span>
+              <% end %>
             <% end %>
           </div>
         </div>
