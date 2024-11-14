@@ -64,6 +64,11 @@ class CoursesController < ApplicationController
     end
   end
 
+  def my_courses
+    @created_courses = current_user.courses
+    @enrolled_courses = current_user.enrolled_courses
+  end
+
   private
 
   def set_course
