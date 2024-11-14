@@ -20627,7 +20627,7 @@ trix-editor .attachment__metadata .attachment__size {
 
 html, body {
   height: 100%;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 body {
@@ -20637,7 +20637,7 @@ body {
 }
 
 main {
-  flex-grow: 1; /* Allow main content to grow and fill available space */
+  flex-grow: 1;
 }
 
 .footer {
@@ -20673,4 +20673,10 @@ main {
 
 .mb-4 {
   margin-bottom: 1.5rem !important;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  background-color: #007bff; /* Highlight color */
+  font-weight: bold;
+  color: white;
 }

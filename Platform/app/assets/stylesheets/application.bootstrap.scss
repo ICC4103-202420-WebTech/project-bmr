@@ -58,6 +58,10 @@
   .mb-4 {
     margin-bottom: 1.5rem !important;
   }
-
+  .navbar-nav .nav-item.active .nav-link {
+    background-color: #007bff; /* Highlight color */
+    font-weight: bold;
+    color: white;
+  }
   
 
