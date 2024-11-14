@@ -1,6 +1,17 @@
 <h1>Edit Course</h1>
 
-<%= form_with model: @course, local: true do |form| %>
+<%= form_with(model: @course, local: true) do |form| %>
+  <% if @course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
+      <ul>
+        <% @course.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, class: "form-control" %>
@@ -8,7 +19,7 @@
 
   <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, class: "form-control" %>
+    <%= form.rich_text_area :description, class: "form-control" %> <!-- Changed to rich_text_area -->
   </div>
 
   <%= form.submit "Update Course", class: "btn btn-primary" %>

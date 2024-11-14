@@ -2,7 +2,6 @@
   <% if @course.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
-
       <ul>
         <% @course.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -18,10 +17,10 @@
 
   <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, class: "form-control" %> <!-- Changed to text_area -->
+    <%= form.rich_text_area :description, class: "form-control" %> <!-- Changed to rich_text_area -->
   </div>
 
-  <%= form.submit class: "btn btn-primary" %>
+  <%= form.submit "Update Course", class: "btn btn-primary" %>
 <% end %>
 
   
