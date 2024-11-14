@@ -5,6 +5,32 @@ class CoursesController < ApplicationController
 
   def index
     @courses = Course.all
+    # Get the most popular courses (top 5 based on enrollments)
+    @popular_courses = Course.joins(:enrollments)
+                              .group("courses.id")
+                              .order("COUNT(enrollments.id) DESC")
+                              .limit(5)
+
+    # Get the new courses created in the past week
+    @new_courses = Course.where("created_at >= ?", 1.week.ago).order(created_at: :desc)
+
+    # If a query for 'popular' or 'new' is passed
+    if params[:popular]
+      @title = "Popular Courses"
+      @description = "Explore the most popular courses chosen by our users. These are the 5 courses that have made the biggest impact!"
+      @courses = Course.joins(:enrollments)
+                       .group("courses.id")
+                       .order("COUNT(enrollments.id) DESC")
+                       .limit(5)
+    elsif params[:new]
+      @title = "New Courses"
+      @description = "Discover the latest courses added to our platform this past week. Stay up to date with fresh, exciting learning opportunities!"
+      @courses = Course.where("created_at >= ?", 1.week.ago).order(created_at: :desc)
+    else
+      @title = "All Courses"
+      @description = "Explore our diverse range of courses designed to enhance your skills and knowledge. Whether you're looking to advance your career or learn something new, we have something for everyone!"
+      @courses = Course.all
+    end
   end
   
   def my_courses

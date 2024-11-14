@@ -1,8 +1,6 @@
 <div class="container">
-  <h1>All Courses</h1>
-  <p class="lead text-muted">
-   Explore our diverse range of courses designed to enhance your skills and knowledge. Whether you're looking to advance your career or learn something new, we have something for everyone!
-  </p>
+  <h1><%= @title %></h1>
+  <p class="lead text-muted"><%= @description %></p>
   <% if can? :create, Course %>
     <%= link_to 'Create a New Course', new_course_path, class: 'btn btn-success mb-3' %>
   <% end %>
