@@ -10,7 +10,7 @@
           <%= link_to "My Courses", my_courses_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "#{current_user.email}", '#', class: "nav-link" %>
+          <span class="nav-link"><%= current_user.email %></span>
         </li>
         <li class="nav-item">
           <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
