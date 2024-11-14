@@ -13,6 +13,7 @@
         <div class="card mb-3">
           <div class="card-body">
             <h5 class="card-title"><%= course.title %></h5>
+            <p class="text-muted">Created by: <%= course.user.email %></p>
             <a href="<%= course_path(course) %>" class="btn btn-primary">View Course</a>
             
             <% if user_signed_in? && !current_user.enrolled_courses.include?(course) %>

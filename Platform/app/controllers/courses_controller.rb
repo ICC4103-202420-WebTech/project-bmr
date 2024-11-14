@@ -54,8 +54,14 @@ class CoursesController < ApplicationController
 
   def enroll
     @course = Course.find(params[:id])
-    current_user.courses << @course unless current_user.courses.include?(@course)
-    redirect_to courses_path, notice: "Successfully enrolled in #{@course.title}."
+  
+    if current_user.enrolled_courses.include?(@course)
+      redirect_to course_path(@course), alert: "You are already enrolled in this course."
+    else
+      @course.users << current_user 
+  
+      redirect_to courses_path, notice: "Successfully enrolled in #{@course.title}."
+    end
   end
 
   private
