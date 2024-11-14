@@ -1,5 +1,5 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
+  <ol class="breadcrumb p-3 mb-4 rounded" style="background-color: #f8f9fa;">
     <li class="breadcrumb-item"><%= link_to 'All Courses', courses_path %></li>
     <li class="breadcrumb-item"><%= link_to @course.title, course_path(@course) %></li>
     <li class="breadcrumb-item active" aria-current="page">New Lesson</li>
@@ -18,7 +18,7 @@
 
     <div class="form-group">
       <%= form.label :content %>
-      <%= form.text_area :content, class: 'form-control' %>
+      <%= form.rich_text_area :content, class: 'form-control' %>
     </div>
 
     <%= form.submit "Create Lesson", class: 'btn btn-primary' %>

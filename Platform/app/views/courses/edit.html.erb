@@ -1,3 +1,10 @@
+<nav aria-label="breadcrumb" class="mb-4">
+<ol class="breadcrumb p-3 mb-4 rounded" style="background-color: #f8f9fa;">
+    <li class="breadcrumb-item"><%= link_to 'All Courses', courses_path %></li>
+    <li class="breadcrumb-item"><%= link_to @course.title, course_path(@course) %></li>
+    <li class="breadcrumb-item active" aria-current="page">Edit Course</li>
+  </ol>
+</nav>
 <h1>Edit Course</h1>
 
 <%= form_with(model: @course, local: true) do |form| %>
