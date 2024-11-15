@@ -18,22 +18,22 @@ class CoursesController < ApplicationController
     if params[:popular]
       @title = "Popular Courses"
       @description = "Explore the most popular courses chosen by our users. These are the 5 courses that have made the biggest impact!"
-      @courses = Course.joins(:enrollments)
-                       .group("courses.id")
-                       .order("COUNT(enrollments.id) DESC")
-                       .limit(5)
+      @courses = @popular_courses
     elsif params[:new]
       @title = "New Courses"
       @description = "Discover the latest courses added to our platform this past week. Stay up to date with fresh, exciting learning opportunities!"
-      @courses = Course.where("created_at >= ?", 1.week.ago).order(created_at: :desc)
+      @courses = @new_courses
     else
       @title = "All Courses"
       @description = "Explore our diverse range of courses designed to enhance your skills and knowledge. Whether you're looking to advance your career or learn something new, we have something for everyone!"
       @courses = Course.all
     end
   end
-  
+
   def my_courses
+    # Courses created by the current user
+    @created_courses = Course.where(teacher_id: current_user.id)
+    # Courses where the current user is enrolled
     @enrolled_courses = current_user.enrolled_courses
   end
 
@@ -49,7 +49,7 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
-    @course.user_id = current_user.id
+    @course.teacher = current_user
     if @course.save
       flash[:notice] = "Course created successfully"
       redirect_to @course
@@ -88,11 +88,6 @@ class CoursesController < ApplicationController
   
       redirect_to courses_path, notice: "Successfully enrolled in #{@course.title}."
     end
-  end
-
-  def my_courses
-    @created_courses = current_user.courses
-    @enrolled_courses = current_user.enrolled_courses
   end
 
   private
