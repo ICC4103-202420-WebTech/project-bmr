@@ -56,7 +56,7 @@ class LessonsController < ApplicationController
   end
 
   def ensure_enrolled
-    unless current_user.enrolled_courses.include?(@course) || @course.user == current_user
+    unless current_user.enrolled_courses.include?(@course) || @course.teacher == current_user
       redirect_to courses_path, alert: 'You must enroll in this course to access the lessons.'
     end
   end
