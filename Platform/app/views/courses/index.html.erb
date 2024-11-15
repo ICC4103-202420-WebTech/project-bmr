@@ -11,11 +11,13 @@
         <div class="card mb-3">
           <div class="card-body">
             <h5 class="card-title"><%= course.title %></h5>
-            <p class="text-muted">Created by: <%= course.user.email %></p>
+            <p class="text-muted">
+              Created by: <%= course.teacher.present? ? course.teacher.email : "Unknown" %>
+            </p>
             <a href="<%= course_path(course) %>" class="btn btn-primary">View Course</a>
             
             <% if user_signed_in? %>
-              <% if current_user != course.user && !current_user.enrolled_courses.include?(course) %>
+              <% if current_user != course.teacher && !current_user.enrolled_courses.include?(course) %>
                 <%= button_to 'Enroll', enroll_course_path(course), method: :post, class: 'btn btn-success' %>
               <% elsif current_user.enrolled_courses.include?(course) %>
                 <span class="badge badge-success">Enrolled</span>
@@ -27,4 +29,3 @@
     <% end %>
   </div>
 </div>
-
