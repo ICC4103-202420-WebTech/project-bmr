@@ -1,6 +1,6 @@
 class Course < ApplicationRecord
   has_rich_text :description
-  belongs_to :user
+  belongs_to :teacher, class_name: 'User', foreign_key: 'teacher_id'
   has_many :lessons
   has_many :enrollments
   has_many :users, through: :enrollments
@@ -12,7 +12,7 @@ class Course < ApplicationRecord
 
   # Course creator with the most courses
   def self.creator_with_most_courses
-    joins(:user).group('users.id').order('COUNT(courses.id) DESC').first
+    joins(:teacher).group('users.id').order('COUNT(courses.id) DESC').first
   end
 
   # Last 3 created courses

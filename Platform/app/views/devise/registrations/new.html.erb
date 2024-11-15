@@ -27,6 +27,12 @@
           <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password", placeholder: "Confirm your password" %>
         </div>
 
+        <!-- Campo de selección de rol con "student" como predeterminado -->
+        <div class="form-group">
+          <%= f.label :role, "Role", class: "form-label" %>
+          <%= f.select :role, [['Estudiante', 'student'], ['Profesor', 'teacher']], {}, { class: "form-control", selected: 'student' } %>
+        </div>
+
         <div class="text-center">
           <%= f.submit "Sign up", class: "btn btn-primary btn-block" %>
         </div>
