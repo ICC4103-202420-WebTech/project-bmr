@@ -51,7 +51,7 @@ class CoursesController < ApplicationController
     @course = Course.new(course_params)
     @course.teacher = current_user
     if @course.save
-      flash[:notice] = "Course created successfully"
+      flash[:notice] = "Course created successfully!"
       redirect_to @course
     else
       flash.now[:alert] = "Error creating course"
@@ -64,7 +64,7 @@ class CoursesController < ApplicationController
 
   def update
     if @course.update(course_params)
-      flash[:notice] = "Course updated successfully"
+      flash[:notice] = "Course updated successfully!"
       redirect_to @course
     else
       flash.now[:alert] = "Error updating course"
