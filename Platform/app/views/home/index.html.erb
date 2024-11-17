@@ -1,6 +1,6 @@
 <div class="jumbotron text-center mt-5">
   <h1>Welcome to the Course Platform</h1>
-  <p class="lead">Discover a variety of courses to boost your knowledge and skills.</p>
+  <p class="lead">Discover a world of learning opportunities and expand your knowledge with our diverse range of courses!</p>
   <%= link_to "Browse Courses", courses_path, class: "btn btn-primary btn-lg mt-3" %>
 </div>
 
@@ -8,17 +8,17 @@
   <div class="row">
     <div class="col-md-4">
       <h3>Popular Courses</h3>
-      <p>Check out the most popular courses chosen by our users.</p>
+      <p>Explore our top-rated courses, carefully selected by our team to help you learn efficiently.</p>
       <%= link_to "View Popular Courses", courses_path(popular: true), class: "btn btn-outline-primary" %>
     </div>
     <div class="col-md-4">
       <h3>New Courses</h3>
-      <p>Explore the latest courses added to our platform.</p>
+      <p>Stay up to date with the newest courses!</p>
       <%= link_to "View New Courses", courses_path(new: true), class: "btn btn-outline-primary" %>
     </div>
     <div class="col-md-4">
       <h3>Enroll Now</h3>
-      <p>Sign up or log in to start learning today.</p>
+      <p>Join our platform today and begin expanding your knowledge.</p>
       <% if user_signed_in? %>
         <%= link_to "My Courses", my_courses_path, class: "btn btn-primary" %>
       <% else %>
