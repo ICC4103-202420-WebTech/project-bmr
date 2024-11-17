@@ -7,37 +7,37 @@ class Ability
     user ||= User.new # guest user (not logged in)
 
     if user.persisted?
-      # Course creators can manage their own courses and associated lessons/questions
-      can :manage, Course, user_id: user.id
-      can :manage, Lesson, course: { user_id: user.id }
-      can :manage, Question, user_id: user.id
-      can :enroll, Course
+      if user.role == "teacher"
+        # Teachers can manage their own courses and lessons
+        can :manage, Course, teacher_id: user.id
+        can :manage, Lesson, course: { teacher_id: user.id }
+        can :manage, Question, user_id: user.id
+        can :read, :my_courses
+      elsif user.role == "student"
+        # Students can read courses and lessons they're enrolled in
+        can :read, Course
+        can :read, Lesson, course: { id: user.enrolled_courses.pluck(:id) }
+        can :enroll, Course
+        can :destroy, Enrollment, user_id: user.id
+        can :read, :my_courses # Allow students to access the my_courses page
 
-      # Allow users to read any course
+        # Students can read and create answers related to enrolled courses
+        can :read, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
+        can :create, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
+      end
+
+      # General permissions for all logged-in users
       can :read, Course
-
-      # Allow enrolled users to read lessons and questions from the courses they are enrolled in
       can :read, Lesson, course: { id: user.enrolled_courses.pluck(:id) }
-      can :read, Question, lesson: { course: { id: user.enrolled_courses.pluck(:id) } }
 
-      # Allow users to enroll in any course
-      can :create, Enrollment # Allow any user to create an enrollment
-
-      # Allow users to manage their own enrollments
-      can :destroy, Enrollment, user_id: user.id
-
-      # Enrolled users can read and create answers to questions in enrolled courses
-      can :read, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
-      can :create, Answer, question: { lesson: { course: { id: user.enrolled_courses.pluck(:id) } } }
-      # Only the course creator can edit or delete a course and manage lessons
-      
+      # Restrictions to prevent non-owners from managing unrelated content
       cannot :update, Course, enrollments: { user_id: user.id }
       cannot :destroy, Course, enrollments: { user_id: user.id }
       cannot :manage, Lesson, course: { enrollments: { user_id: user.id } }
     else
-      # Guests (not logged in) can only read courses and access the registration and login pages
+      # Permissions for guests
       can :read, Course
-      can :create, User # Allow guest users to create accounts
+      can :create, User # Allow guests to create accounts
     end
   end
 end
