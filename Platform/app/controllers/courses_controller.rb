@@ -31,6 +31,9 @@ class CoursesController < ApplicationController
   end
 
   def my_courses
+    # Added authorization to ensure proper permissions
+    authorize! :read, :my_courses
+
     # Courses created by the current user
     @created_courses = Course.where(teacher_id: current_user.id)
     # Courses where the current user is enrolled
@@ -40,11 +43,23 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find(params[:id])
     @lessons = @course.lessons
+
+    # Redirect guests to the sign-in page
+    unless user_signed_in?
+      flash[:alert] = "You need to sign in to view course details."
+      redirect_to new_user_session_path
+    end
   end
 
   def new
-    @course = Course.new
-    @teachers = User.all 
+    # Restrict access to teachers only
+    if current_user.role != "teacher"
+      flash[:alert] = "You are not authorized to create a course."
+      redirect_to courses_path
+    else
+      @course = Course.new
+      @teachers = User.all
+    end
   end
 
   def create
@@ -60,32 +75,48 @@ class CoursesController < ApplicationController
   end
 
   def edit
+    # Ensure only the teacher who created the course can edit it
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to edit this course."
+      redirect_to courses_path
+    end
   end
 
   def update
-    if @course.update(course_params)
-      flash[:notice] = "Course updated successfully!"
-      redirect_to @course
+    # Ensure only the teacher who created the course can update it
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to update this course."
+      redirect_to courses_path
     else
-      flash.now[:alert] = "Error updating course"
-      render :edit
+      if @course.update(course_params)
+        flash[:notice] = "Course updated successfully!"
+        redirect_to @course
+      else
+        flash.now[:alert] = "Error updating course"
+        render :edit
+      end
     end
   end
 
   def destroy
-    @course.destroy
-    flash[:notice] = "Course deleted successfully"
-    redirect_to courses_path
+    # Ensure only the teacher who created the course can delete it
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to delete this course."
+      redirect_to courses_path
+    else
+      @course.destroy
+      flash[:notice] = "Course deleted successfully"
+      redirect_to courses_path
+    end
   end
 
   def enroll
     @course = Course.find(params[:id])
-  
+
     if current_user.enrolled_courses.include?(@course)
       redirect_to course_path(@course), alert: "You are already enrolled in this course."
     else
-      @course.users << current_user 
-  
+      @course.users << current_user
       redirect_to courses_path, notice: "Successfully enrolled in #{@course.title}."
     end
   end
