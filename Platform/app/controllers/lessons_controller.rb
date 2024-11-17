@@ -8,37 +8,61 @@ class LessonsController < ApplicationController
   end
 
   def new
-    @lesson = @course.lessons.new
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to add lessons to this course."
+      redirect_to course_path(@course)
+    else
+      @lesson = @course.lessons.new
+    end
   end
 
   def create
-    @lesson = @course.lessons.new(lesson_params)
-    if @lesson.save
-      flash[:notice] = "Lesson created successfully"
-      redirect_to course_lesson_path(@course, @lesson)
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to create lessons for this course."
+      redirect_to course_path(@course)
     else
-      flash.now[:alert] = "Error creating lesson"
-      render :new
+      @lesson = @course.lessons.new(lesson_params)
+      if @lesson.save
+        flash[:notice] = "Lesson created successfully"
+        redirect_to course_lesson_path(@course, @lesson)
+      else
+        flash.now[:alert] = "Error creating lesson"
+        render :new
+      end
     end
   end
 
   def edit
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to edit this lesson."
+      redirect_to course_path(@course)
+    end
   end
 
   def update
-    if @lesson.update(lesson_params)
-      flash[:notice] = "Lesson updated successfully"
-      redirect_to course_lesson_path(@course, @lesson)
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to update this lesson."
+      redirect_to course_path(@course)
     else
-      flash.now[:alert] = "Error updating lesson"
-      render :edit
+      if @lesson.update(lesson_params)
+        flash[:notice] = "Lesson updated successfully"
+        redirect_to course_lesson_path(@course, @lesson)
+      else
+        flash.now[:alert] = "Error updating lesson"
+        render :edit
+      end
     end
   end
 
   def destroy
-    @lesson.destroy
-    flash[:notice] = "Lesson deleted successfully"
-    redirect_to course_path(@course)
+    unless current_user.id == @course.teacher_id
+      flash[:alert] = "You are not authorized to delete this lesson."
+      redirect_to course_path(@course)
+    else
+      @lesson.destroy
+      flash[:notice] = "Lesson deleted successfully"
+      redirect_to course_path(@course)
+    end
   end
 
   private
