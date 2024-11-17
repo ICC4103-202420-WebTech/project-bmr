@@ -1,7 +1,8 @@
 <div class="container">
   <h1><%= @title %></h1>
   <p class="lead text-muted"><%= @description %></p>
-  <% if can? :create, Course %>
+
+  <% if user_signed_in? && current_user.role == "teacher" %>
     <%= link_to 'Create a New Course', new_course_path, class: 'btn btn-success mb-3' %>
   <% end %>
 
