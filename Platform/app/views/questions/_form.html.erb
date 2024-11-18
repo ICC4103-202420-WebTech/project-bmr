@@ -1,0 +1,7 @@
+<%= form_with(model: [@course, @lesson, Question.new], local: true) do |f| %>
+  <div class="form-group">
+    <%= f.label :content, "Ask a question:" %>
+    <%= f.text_area :content, class: 'form-control', rows: 3 %>
+  </div>
+  <%= f.submit 'Post Question', class: 'btn btn-primary' %>
+<% end %>

@@ -1,8 +1,8 @@
 class Course < ApplicationRecord
   has_rich_text :description
   belongs_to :teacher, class_name: 'User', foreign_key: 'teacher_id'
-  has_many :lessons
-  has_many :enrollments
+  has_many :lessons, dependent: :destroy
+  has_many :enrollments, dependent: :destroy
   has_many :users, through: :enrollments
 
   # Course with the most lessons

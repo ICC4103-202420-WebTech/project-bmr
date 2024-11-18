@@ -9,6 +9,16 @@
   <h1 class="display-4"><%= @course.title %></h1>
   <p class="lead"><%= @course.description %></p>
 
+  <% if current_user.enrolled_courses.include?(@course) && @enrollment %>
+    <div class="progress mt-4">
+      <div class="progress-bar" role="progressbar" style="width: <%= @enrollment.progress_percentage %>%;" aria-valuenow="<%= @enrollment.progress_percentage %>" aria-valuemin="0" aria-valuemax="100">
+        <%= @enrollment.progress_percentage %>% Completed
+      </div>
+    </div>
+  <% else %>
+    <p class="text-warning">Progress data not available or you are not enrolled in this course.</p>
+  <% end %>
+
   <h2 class="mt-5">Lessons</h2>
   <div class="row">
     <% @course.lessons.each do |lesson| %>

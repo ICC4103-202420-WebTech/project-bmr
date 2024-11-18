@@ -5,6 +5,10 @@ class LessonsController < ApplicationController
   before_action :ensure_enrolled, only: [:show]
 
   def show
+    @questions = @lesson.questions.includes(:answers, :user)
+
+    # Marcar la lección como completada
+    mark_lesson_as_completed
   end
 
   def new
@@ -44,7 +48,7 @@ class LessonsController < ApplicationController
       flash[:alert] = "You are not authorized to update this lesson."
       redirect_to course_path(@course)
     else
-      if @lesson.update(lesson_params)
+      if @lesson.update(lesson_params.except(:position))
         flash[:notice] = "Lesson updated successfully"
         redirect_to course_lesson_path(@course, @lesson)
       else
@@ -82,6 +86,16 @@ class LessonsController < ApplicationController
   def ensure_enrolled
     unless current_user.enrolled_courses.include?(@course) || @course.teacher == current_user
       redirect_to course_path(@course), alert: 'You must enroll in this course to access the lessons.'
+    end
+  end
+
+  def mark_lesson_as_completed
+    enrollment = current_user.enrollments.find_by(course: @course)
+    return unless enrollment # Asegurarse de que el usuario esté inscrito
+
+    # Marcar la lección como completada si no está ya marcada
+    unless enrollment.completed_lessons.exists?(lesson: @lesson)
+      enrollment.completed_lessons.create(lesson: @lesson)
     end
   end
 end

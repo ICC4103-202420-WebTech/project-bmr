@@ -8,20 +8,55 @@
 
 <div class="container">
   <h1><%= @lesson.title %></h1>
+  <div><%= @lesson.content %></div>
 
-  <div>
-    <%= @lesson.content %>
+  <hr class="my-4">
+  
+  <div id="questions">
+    <h2>Questions and Answers</h2>
+
+    <% @lesson.questions.each do |question| %>
+      <div class="question mb-4 p-3 border">
+        <p>
+          <strong><%= question.user.first_name %> <%= question.user.last_name %> (<%= question.user.email %>)</strong> asked:
+        </p>
+        <p class="ml-3">
+          <%= question.content %>
+        </p>
+
+        <% question.answers.each do |answer| %>
+          <div class="answer ml-5 border-left pl-3 my-2">
+            <p>
+              <strong><%= answer.user.first_name %> <%= answer.user.last_name %> (<%= answer.user.email %>)</strong> answered:
+            </p>
+            <p>
+              <%= answer.content %>
+            </p>
+          </div>
+        <% end %>
+
+        <% if user_signed_in? %>
+          <%= render 'answers/form', question: question %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <div class="new-question-form mt-4">
+        <%= render 'questions/form', lesson: @lesson %>
+      </div>
+    <% else %>
+      <p class="text-muted">Please sign in to ask a question or respond.</p>
+    <% end %>
   </div>
 
   <div class="mt-4 d-flex justify-content-start">
     <%= link_to 'Back to Course', course_path(@course), class: 'btn btn-primary mr-4' %>
-
     <% if user_signed_in? && current_user.role == "teacher" && can?(:update, @lesson) %>
       <%= link_to 'Edit Lesson', edit_course_lesson_path(@course, @lesson), class: 'btn btn-secondary mr-4' %>
     <% end %>
-
     <% if user_signed_in? && current_user.role == "teacher" && can?(:destroy, @lesson) %>
-      <%= button_to 'Delete Lesson', course_lesson_path(@course, @lesson), method: :delete, data: { confirm: 'Are you sure you want to delete this lesson?' }, class: 'btn btn-danger' %>
+      <%= button_to 'Delete Lesson', course_lesson_path(@course, @lesson), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
     <% end %>
   </div>
 </div>

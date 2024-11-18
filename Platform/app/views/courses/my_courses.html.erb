@@ -32,6 +32,9 @@
           <div class="card mb-3">
             <div class="card-body mt-1">
               <h5 class="card-title"><%= course.title %></h5>
+              <% if current_user.enrolled_courses.include?(course) %>
+                <p>Progress: <%= course.enrollments.find_by(user: current_user)&.progress_percentage || 0 %>%</p>
+              <% end %>
               <%= link_to 'View Course', course_path(course), class: 'btn btn-primary' %>
             </div>
           </div>
@@ -42,4 +45,3 @@
     <p>You are not enrolled in any courses.</p>
   <% end %>
 </div>
-

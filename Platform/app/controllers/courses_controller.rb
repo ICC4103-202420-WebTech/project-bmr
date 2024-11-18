@@ -1,20 +1,16 @@
 class CoursesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:my_courses]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_course, only: [:edit, :update, :destroy]
+  before_action :set_course, only: [:edit, :update, :destroy, :show]
 
   def index
     @courses = Course.all
-    # Get the most popular courses (top 5 based on enrollments)
     @popular_courses = Course.joins(:enrollments)
                               .group("courses.id")
                               .order("COUNT(enrollments.id) DESC")
                               .limit(5)
-
-    # Get the new courses created in the past week
     @new_courses = Course.where("created_at >= ?", 1.week.ago).order(created_at: :desc)
 
-    # If a query for 'popular' or 'new' is passed
     if params[:popular]
       @title = "Popular Courses"
       @description = "Explore the most popular courses chosen by our users. These are the 5 courses that have made the biggest impact!"
@@ -31,20 +27,24 @@ class CoursesController < ApplicationController
   end
 
   def my_courses
-    # Added authorization to ensure proper permissions
     authorize! :read, :my_courses
 
-    # Courses created by the current user
-    @created_courses = Course.where(teacher_id: current_user.id)
-    # Courses where the current user is enrolled
-    @enrolled_courses = current_user.enrolled_courses
+    if current_user.role == "teacher"
+      @created_courses = Course.where(teacher_id: current_user.id)
+      @enrolled_courses = current_user.enrolled_courses
+    elsif current_user.role == "student"
+      @created_courses = []
+      @enrolled_courses = current_user.enrolled_courses
+    else
+      redirect_to root_path, alert: "You are not authorized to access this page."
+    end
   end
 
   def show
-    @course = Course.find(params[:id])
     @lessons = @course.lessons
-
-    # Redirect guests to the sign-in page
+    if current_user.enrolled_courses.include?(@course)
+      @enrollment = Enrollment.find_by(user: current_user, course: @course)
+    end
     unless user_signed_in?
       flash[:alert] = "You need to sign in to view course details."
       redirect_to new_user_session_path
@@ -52,7 +52,6 @@ class CoursesController < ApplicationController
   end
 
   def new
-    # Restrict access to teachers only
     if current_user.role != "teacher"
       flash[:alert] = "You are not authorized to create a course."
       redirect_to courses_path
@@ -75,7 +74,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    # Ensure only the teacher who created the course can edit it
+    authorize! :update, @course
     unless current_user.id == @course.teacher_id
       flash[:alert] = "You are not authorized to edit this course."
       redirect_to courses_path
@@ -83,7 +82,6 @@ class CoursesController < ApplicationController
   end
 
   def update
-    # Ensure only the teacher who created the course can update it
     unless current_user.id == @course.teacher_id
       flash[:alert] = "You are not authorized to update this course."
       redirect_to courses_path
@@ -99,7 +97,7 @@ class CoursesController < ApplicationController
   end
 
   def destroy
-    # Ensure only the teacher who created the course can delete it
+    authorize! :destroy, @course
     unless current_user.id == @course.teacher_id
       flash[:alert] = "You are not authorized to delete this course."
       redirect_to courses_path
